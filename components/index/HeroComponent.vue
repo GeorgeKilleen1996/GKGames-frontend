@@ -15,7 +15,7 @@
 
 <style>
 .hero-right-background-slate{
-    clip-path: polygon(65% 0, 100% 0, 100% 100%, 45% 100%);
+    clip-path: polygon(64.5% 0, 100% 0, 100% 100%, 44.5% 100%);
 }
 
 .hero-right-background-red{
