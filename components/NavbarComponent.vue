@@ -1,7 +1,7 @@
 <script setup>
 </script>
 <template>
-    <div class="w-full h-16 max-w-[90rem] md:px-10 px-2 mx-auto">
+    <div class="w-full h-16 max-w-[90rem] md:px-10 px-2 mx-auto fixed top-0 z-50">
         <div class="w-full h-full flex justify-between items-center">
             <div class="flex flex-row items-center">
                 <div class="w-12 h-12 rounded-full flex justify-center items-center bg-red-500 text-white font-semibold text-xl">
