@@ -18,7 +18,7 @@
                         <i class="fas fa-user text-xl pr-1"></i>
                     </div>
                     <div class="tracking-wide text-xs font-light flex flex-col items-start justify-center pl-1 leading-tight">
-                        <span class="hover:text-white cursor-pointer transition-all">Sign In</span>
+                        <NuxtLink to="/auth/login" class="hover:text-white cursor-pointer transition-all">Sign In</NuxtLink>
                         <span class="font-medium hover:text-white cursor-pointer transition-all">Account</span>
                     </div>
                 </div>

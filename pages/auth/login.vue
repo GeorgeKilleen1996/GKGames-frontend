@@ -14,8 +14,11 @@
                     <div class="w-full h-12 px-4">
                         <input type="password" class="w-full h-full rounded-md border px-2 focus:outline-none focus:ring-2 focus:ring-red-700" placeholder="Password">
                     </div>
-                    <div class="w-full h-12 px-4 mb-4">
+                    <div class="w-full h-12 px-4">
                         <button class="w-full h-full rounded-md text-center text-red-700 border border-red-700 hover:bg-red-700 hover:text-white transition-all">Login</button>
+                    </div>
+                    <div class="w-full px-4 text-sm tracking-tight mb-4">
+                        Are you new here? <NuxtLink to="/auth/register" class="text-red-700 hover:underline transition-all">Register an account</NuxtLink>
                     </div>
                 </div>
             </div>
