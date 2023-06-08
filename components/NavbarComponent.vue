@@ -7,5 +7,6 @@
         <!-- Upper Navbar -->
         <UpperNavbarComponent />
         <!-- Lower Navbar -->
+        <LowerNavbarComponent />
     </div>
 </template>
