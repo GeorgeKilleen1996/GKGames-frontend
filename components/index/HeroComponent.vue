@@ -1,35 +1,14 @@
-<script setup>
-const images = [
-    '/hero/1.png',
-]
-</script>
 <template>
-    <div class="w-full max-w-[90rem] relative">
-        <div class="w-full h-full bg-red-700 absolute top-0 right-0 hero-right-background-red"></div>
-        <div class="w-full h-full bg-zinc-800 absolute top-0 right-0 hero-right-background-zinc overflow-hidden">
-            <div class="w-full h-full flex flex-wrap">
-                <div v-for="i in 1000" class="w-10 h-10 aspect-square grow-0 flex justify-center items-center">
-                    <img :src="images[0]" alt="" class="w-[25px] h-[25px] opacity-[0.07]">
-                </div>
+    <div class="w-full max-w-[90rem] mx-auto lg:px-5 py-[1.5rem]">
+        <div class="w-full h-[35rem] bg-black rounded-2xl flex justify-center items-center overflow-hidden relative">
+            <img class="absolute top-0 left-0" src="/img/pokemon/scarletandviolet_hero.jpg" alt="">
+            <div class="bg-white/30 backdrop-blur-sm rounded-full w-6 h-6 flex justify-center items-center absolute top-2 right-2">
+                <i class="fas fa-info text-xs"></i>
             </div>
-        </div>
-        <div class="w-full h-[50rem] mx-auto grid grid-cols-2 grid-rows-1">
-            <div class="relative">
-                <div class="w-full h-full md:pl-10 pl-2"></div>
-            </div>
-            <div class="relative">
-                <div class="w-full h-full md:pr-10 pr-2"></div>
+            <div class="flex flex-col justify-center items-center gap-2 bg-white/30 backdrop-blur-sm rounded-xl p-8 relative">
+                <div class="text-3xl font-semibold tracking-wide text-white uppercase">Coming Soon</div>
+                <div class="text-sm tracking-tight text-white">GK Games is currently undergoing a major redevelopment project!</div>
             </div>
         </div>
     </div>
 </template>
-
-<style>
-.hero-right-background-zinc{
-    clip-path: polygon(64.5% 0, 100% 0, 100% 100%, 44.5% 100%);
-}
-
-.hero-right-background-red{
-    clip-path: polygon(64% 0, 100% 0, 100% 100%, 44% 100%);
-}
-</style>
