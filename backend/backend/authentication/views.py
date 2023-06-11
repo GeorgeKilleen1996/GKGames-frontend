@@ -28,8 +28,9 @@ class RegistrationView(APIView):
         if serializer.is_valid():
             email = serializer.validated_data['email']
             password = serializer.validated_data['password']
-            email = serializer.validated_data['email']
-            CustomUser.objects.create_user(email=email, password=password, email=email)
+            first_name = serializer.validated_data['first_name']
+            last_name = serializer.validated_data['last_name']
+            CustomUser.objects.create_user(email=email, password=password, first_name=first_name, last_name=last_name)
             return Response({'message': 'User registered successfully'})
         return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
 
