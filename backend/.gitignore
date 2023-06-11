@@ -1,0 +1,45 @@
+# Python/Django
+*.pyc
+__pycache__/
+*.py[cod]
+*$py.class
+*.pyo
+*.pyd
+
+# Virtual Environment
+venv/
+env/
+
+# IDE
+.idea/
+.vscode/
+
+# Dependency Management
+pip-lock.txt
+pipenv.lock
+yarn.lock
+
+# Database
+db.sqlite3
+
+# Static Files
+/static/
+
+# Media Files
+/media/
+
+# Logs
+*.log
+
+# Compiled files
+*.com
+*.class
+*.dll
+*.exe
+*.o
+*.so
+
+# Miscellaneous
+*.bak
+*.swp
+.DS_Store
