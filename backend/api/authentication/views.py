@@ -4,7 +4,7 @@ from rest_framework.response import Response
 from rest_framework import status
 from django.contrib.auth import authenticate, login
 from .serializers import LoginSerializer, RegistrationSerializer
-from api.models import User as CustomUser
+from accounts.models import User as CustomUser
 
 
 # Create your views here.
@@ -33,4 +33,3 @@ class RegistrationView(APIView):
             CustomUser.objects.create_user(email=email, password=password, first_name=first_name, last_name=last_name)
             return Response({'message': 'User registered successfully'})
         return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
-
