@@ -34,12 +34,35 @@ const registerUser = () => {
 </script>
 <template>
     <div class="w-full h-screen relative">
-        <div class="w-full h-screen register-right-background-red absolute top-0 right-0 bg-red-700"></div>
-        <div class="w-full h-screen register-right-background-zinc absolute top-0 right-0 bg-zinc-800"></div>
-        <div class="grid grid-rows-1 register-grid-cols h-screen">
+        <div class="flex flex-row w-full h-full">
+            <div class="w-1/3 h-full bg-neutral-100 drop-shadow-sm flex justify-center items-center">
+                <div class="w-4/5 flex flex-col justify-center items-center gap-8">
+                    <div class="text-xl tracking-wider uppercase text-neutral-500">Create an account</div>
+                    <div class="w-full flex gap-6">
+                        <div class="w-1/2 h-12">
+                            <input type="text" placeholder="First Name" class="w-full h-full rounded-md px-4">
+                        </div>
+                        <div class="w-1/2 h-12">
+                            <input type="text" placeholder="Last Name" class="w-full h-full rounded-md px-4">
+                        </div>
+                    </div>
+                    <div class="w-full h-12">
+                        <input type="text" placeholder="Email Address" class="w-full h-full rounded-md px-4">
+                    </div>
+                    <div class="w-full h-12">
+                        <input type="text" placeholder="Password" class="w-full h-full rounded-md px-4">
+                    </div>
+                    <div class="w-full h-12">
+                        <input type="text" placeholder="Confirm Password" class="w-full h-full rounded-md px-4">
+                    </div>
+                    <button class="w-full h-12 rounded-md bg-gradient-to-br from-teal-400 to-teal-500 text-white uppercase">Sign Up</button>
+                </div>
+            </div>
+            <div class="w-2/3 h-full"></div>
+        </div>
+        <!-- <div class="grid grid-rows-1 register-grid-cols h-screen">
             <div class="w-full h-full flex justify-end items-center">
                 <div class="w-5/6 bg-white shadow-md rounded-md flex flex-col gap-4 border overflow-hidden">
-                    <div class="w-full h-1 bg-red-700"></div>
                     <div class="w-full text-2xl tracking-wide px-4 pt-4">Register</div>
                     <div class="w-full flex flex-row gap-4 px-4">
                         <div class="w-1/2 h-12">
@@ -63,7 +86,7 @@ const registerUser = () => {
                     </div>
                 </div>
             </div>
-        </div>
+        </div> -->
     </div>
 </template>
 
