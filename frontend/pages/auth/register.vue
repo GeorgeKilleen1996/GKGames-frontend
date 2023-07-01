@@ -26,7 +26,11 @@ const registerUser = () => {
                     last_name: last_name.value,
                 }),
             }).then(response => {
-                console.log(response);
+                if(response.ok){
+                    alert('User created')
+                } else {
+                    alert('User not created')
+                }
             });
         }
     }
@@ -40,22 +44,22 @@ const registerUser = () => {
                     <div class="text-xl tracking-wider uppercase text-neutral-500">Create an account</div>
                     <div class="w-full flex gap-6">
                         <div class="w-1/2 h-12">
-                            <input type="text" placeholder="First Name" class="w-full h-full rounded-md px-4">
+                            <input type="text" placeholder="First Name" class="w-full h-full rounded-md px-4" v-model="first_name">
                         </div>
                         <div class="w-1/2 h-12">
-                            <input type="text" placeholder="Last Name" class="w-full h-full rounded-md px-4">
+                            <input type="text" placeholder="Last Name" class="w-full h-full rounded-md px-4" v-model="last_name">
                         </div>
                     </div>
                     <div class="w-full h-12">
-                        <input type="text" placeholder="Email Address" class="w-full h-full rounded-md px-4">
+                        <input type="text" placeholder="Email Address" class="w-full h-full rounded-md px-4" v-model="email">
                     </div>
                     <div class="w-full h-12">
-                        <input type="text" placeholder="Password" class="w-full h-full rounded-md px-4">
+                        <input type="password" placeholder="Password" class="w-full h-full rounded-md px-4" v-model="password">
                     </div>
                     <div class="w-full h-12">
-                        <input type="text" placeholder="Confirm Password" class="w-full h-full rounded-md px-4">
+                        <input type="password" placeholder="Confirm Password" class="w-full h-full rounded-md px-4" v-model="confirm_password">
                     </div>
-                    <button class="w-full h-12 rounded-md bg-gradient-to-br from-teal-400 to-teal-500 text-white uppercase">Sign Up</button>
+                    <button class="w-full h-12 rounded-md bg-gradient-to-br from-teal-400 to-teal-500 text-white uppercase" @click="registerUser()">Sign Up</button>
                 </div>
             </div>
             <div class="w-2/3 h-full"></div>

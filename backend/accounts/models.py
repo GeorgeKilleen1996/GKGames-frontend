@@ -6,6 +6,7 @@ class UserManager(BaseUserManager):
         if not email:
             raise ValueError('The Email field must be set')
         email = self.normalize_email(email)
+        extra_fields.setdefault('password', password)
         user = self.model(email=email, **extra_fields)
         user.set_password(password)
         user.save(using=self._db)
@@ -19,7 +20,8 @@ class UserManager(BaseUserManager):
 class User(AbstractBaseUser):
     first_name = models.CharField(max_length=255)
     last_name = models.CharField(max_length=255)
-    email = models.EmailField(unique=True) # unique=True
+    email = models.EmailField(unique=True)
+    password = models.CharField(max_length=128)  # Add the password field
     is_staff = models.BooleanField(default=False)
     is_superuser = models.BooleanField(default=False)
     created_at = models.DateTimeField(auto_now_add=True)
