@@ -1,45 +1,26 @@
-# Python/Django
+# Ignore Python virtual environment files
+venv/
+.env
+
+# Ignore Django generated files
 *.pyc
 __pycache__/
-*.py[cod]
-*$py.class
-*.pyo
-*.pyd
+db.sqlite3
 
-# Virtual Environment
-venv/
-env/
-
-# IDE
+# Ignore IDE and editor-specific files
 .idea/
 .vscode/
 
-# Dependency Management
-pip-lock.txt
-pipenv.lock
-yarn.lock
+# Ignore local development settings
+settings/local.py
 
-# Database
-db.sqlite3
+# Ignore log files
+logs/
 
-# Static Files
-/static/
+# Ignore static and media files (if not using a CDN)
+static/
+media/
 
-# Media Files
-/media/
-
-# Logs
-*.log
-
-# Compiled files
-*.com
-*.class
-*.dll
-*.exe
-*.o
-*.so
-
-# Miscellaneous
-*.bak
-*.swp
-.DS_Store
+# Ignore sensitive configuration files
+*.secret
+*.key
